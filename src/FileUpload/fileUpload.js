@@ -1,4 +1,5 @@
 import React from "react";
+import "./FileUpload.css";
 
 function FileUpload({ saveFile }) {
   function changeHandler(e) {
@@ -8,11 +9,13 @@ function FileUpload({ saveFile }) {
   return (
     <React.Fragment>
       <form>
+        <div className=" input">
         <input
           type="file"
           name="Upload PDF File "
           onChange={changeHandler}
         ></input>
+        </div>
       </form>
     </React.Fragment>
   );
