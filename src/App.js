@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import FileUpload from "./FileUpload/FileUpload";
+import FileUpload from "./FileUpload/fileUpload";
 import PdfViewerComponent from "./PdfViewer/pdfViewer";
 
 function App() {
