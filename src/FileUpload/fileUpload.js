@@ -3,20 +3,30 @@ import "./FileUpload.css";
 
 function FileUpload({ saveFile }) {
   function changeHandler(e) {
-    saveFile(e.target.files[0]);
+    let input = document.createElement("input");
+    input.type = "file";
+    input.onchange = (_) => {
+      // you can use this method to get file and perform respective operations
+      let files = Array.from(input.files);
+      console.log(files);
+      saveFile(files[0]);
+    };
+    input.click();
   }
 
   return (
     <React.Fragment>
-      <form>
-        <div className=" input">
-        <input
-          type="file"
-          name="Upload PDF File "
-          onChange={changeHandler}
-        ></input>
+      <div className="input">
+        <div className="button">
+          <input
+            type="button"
+            onClick={changeHandler}
+            value="Upload Document"
+            className="input-button"
+          ></input>
         </div>
-      </form>
+        </div>
+      
     </React.Fragment>
   );
 }

@@ -1,6 +1,20 @@
 
-  
-  .imput {
+  .input{
+    display: flex;
     text-align: center;
-    margin: auto;
+    /* margin: 204px; */
+    align-items: center;
+    height: 50vh;
+  }
+  .button{
+    flex: 1;
+  }
+  .input-button {
+    background-color: #03bb88;
+    padding: 15px 40px;
+    font-size: 21px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
   }
